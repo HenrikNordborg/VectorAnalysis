@@ -1,0 +1,74 @@
+\documentclass[a4paper,11pt]{article}
+
+\input{definitions.tex}
+
+\begin{document}
+
+\selectlanguage{english}
+
+\title{Vector Analysis and Tensors}
+\author{Henrik Nordborg}
+%\date{Version 2017-02-05}
+\maketitle
+
+\section{Introduction}
+
+\section{Functions of many variables and partial derivatives}
+
+
+\subsection{Scalar and vector fields}
+
+Continuum mechanics works with \emph{scalar} and \emph{vector fields}. A scalar field is a scalar function of multiple variables such as 
+\be
+\phi(x,y,z,t) = \phi(\xvec,t)
+\ee
+
+\subsection{Partial derivatives}
+
+The partial derivaties are derived according to
+\be
+\frac{\partial \phi}{\partial x} = \lim_{h\rightarrow 0} \frac{\phi(x+h,y,z,t) - \phi(x,y,z,t)}{h}
+\ee
+with analogous defintions for ${\partial \phi}/{\partial y}$ and ${\partial \phi}/{\partial z}$.
+
+Note that we we use a special symbol, the curved $\partial$, to differentiate the partial derivative from the total derivative. The reason why this is necessary can be understood by considering the following example. Consider a function of time and space $f(t,x)$. Let us assume that the  $x$-coordinate is a function of $t$. In this case, our function only depends on $t$ and we have
+\be
+g(t) = f(t,x(t)).
+\ee
+If we compute the derivate we obtain
+\be
+\frac{d g}{dt} = \frac{\partial f}{\partial t} + \frac{\partial f}{\partial x} \frac{dx}{dt}.
+\ee
+There are different notations for the partial deriative. One often finds
+\be
+\frac{\partial f}{\partial t}  = \partial_t f = f_t
+\ee
+
+\subsection{Gradient}
+
+Consider a scalar field $\phi(x,y,z)$. The gradient of $\phi$ is a vector field with the components
+\be
+\mathrm{grad}\, \phi = \nabla \phi = \left( \frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y}, \frac{\partial \phi}{\partial z} \right).
+\ee
+The importance of the gradient can be understood by considering the change in the value of $\phi(x,y,z)$ under a small change of the arguments. We find
+\be
+\phi(x+\delta x ,y+\delta y,z+\delta z) \approx \phi(x,y,z) + \frac{\partial \phi}{\partial x} \delta x +  \frac{\partial \phi}{\partial y} \delta y + \frac{\partial \phi}{\partial z} \delta z
+\ee
+or
+\be
+\phi( \xvec + \delta \xvec ) = \phi( \xvec ) + \nabla\phi\cdot \delta\xvec + \mathcal{O}(|\delta\xvec|^2).
+\ee
+The gradient is therefore is the generalization of the derivative to many dimensions. The vector $\nabla \phi$ gives the direction of maximum increase of $\phi$. A local maximum or minimum is characterized by $\nabla \phi  = 0$.
+
+\subsection{Divergence}
+
+Consider a vector field 
+
+
+
+
+
+
+
+
+\end{document}
